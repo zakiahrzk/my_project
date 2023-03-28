@@ -15,7 +15,6 @@ def main():
     #Example
     timestamp = left.number_input("Period in months")
     button = st.button('Predict')
-    '''
 
     # if button is clicked
     if button:
