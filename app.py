@@ -27,9 +27,6 @@ def main():
 with open('attrition_model.pkl', 'rb') as pkl:
     attrition_model = pickle.load(pkl)
 
-'''Example for predict function
-
-
 def predict(timestamp):
     # making predictions
     prediction = attrition_model.predict([[timestamp]])
@@ -37,7 +34,7 @@ def predict(timestamp):
     verdict = prediction
     return verdict
 
-'''
+
 
 
 if __name__ == '__main__':
