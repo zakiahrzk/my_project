@@ -13,7 +13,7 @@ def main():
     #Show all the independent columns along with the label for each column and the values in that column"
 
     #Example
-    timestamp = left.number.input("Period in months")
+    timestamp = left.number_input("Period in months")
     button = st.button('Predict')
     '''
 
@@ -23,19 +23,16 @@ def main():
         result = predict(timestamp)
         st.success(f'The predicted attrition rate is {result}')
 
-# load the train model
-with open('attrition_model.pkl', 'rb') as pkl:
-    attrition_model = pickle.load(pkl)
-    
-'''#Example for predict function
-    
 def predict(timestamp):
+    # load the train model
+    with open('attrition_model.pkl', 'rb') as pkl:
+        attrition_model = pickle.load(pkl)
+    
     # making predictions
     prediction = attrition_model.predict([[timestamp]])
     
     verdict = prediction
     return verdict
-'''
 
 if __name__ == '__main__':
     main()
